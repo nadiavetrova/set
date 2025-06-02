@@ -198,7 +198,10 @@ document.querySelector('.b-12').addEventListener('click', () => {
 // Task 13
 // Напишите функцию, которая делает intersection наборов a с набором b. Функция должна возвращать созданный set.
 
-const t13 = () => { }
+const t13 = () => {
+  a.intersection(b);
+  return a;
+}
 
 document.querySelector('.b-13').addEventListener('click', () => {
   console.log(t13());

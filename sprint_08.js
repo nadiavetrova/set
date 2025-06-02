@@ -68,7 +68,11 @@ document.querySelector('.b-4').addEventListener('click', t04);
 
 const st_05 = new Set(['Atari 2600', 'Atari 5200', 'Atari 7800', 'Atari ST']);
 
-const t05 = () => { }
+const t05 = () => {
+  st_05.clear();
+  console.log(st_05);
+
+}
 
 document.querySelector('.b-5').addEventListener('click', t05);
 

@@ -121,10 +121,10 @@ document.querySelector('.b-7').addEventListener('click', t07);
 
 let st_08 = new Set([22, 19, 16, 13, 10, 7]);
 const t08 = () => {
+
   document.querySelector('.out-8').textContent = [...st_08].sort((a, b) => a - b).join(' ');
+
 };
-
-
 
 document.querySelector('.b-8').addEventListener('click', t08);
 
@@ -134,7 +134,15 @@ document.querySelector('.b-8').addEventListener('click', t08);
 
 let st_09 = new Set([22, 19, 16, 13, 10, 7]);
 
-const t09 = () => { }
+const t09 = () => {
+  let res = [];
+  for (item of st_09) {
+    if (item % 2 == 0) {
+      res.push(item);
+    }
+  }
+  document.querySelector('.out-9').textContent = res.join(' ');
+}
 
 document.querySelector('.b-9').addEventListener('click', t09);
 

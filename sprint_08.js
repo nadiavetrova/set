@@ -48,7 +48,16 @@ document.querySelector('.b-3').addEventListener('click', t03);
 
 const st_04 = new Set(['Samantha', 'Wade', 'Daito', 'Sho']);
 
-const t04 = () => { }
+const t04 = () => {
+  const s4 = document.querySelector('.s-4');
+  const out4 = document.querySelector('.out-4');
+  st_04.delete(s4.value);
+  for (item of st_04) {
+    console.log(item);
+    out4.textContent += item + ' ';
+  }
+  return out4
+}
 
 document.querySelector('.b-4').addEventListener('click', t04);
 

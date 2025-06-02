@@ -336,11 +336,14 @@ document.querySelector('.b-19').addEventListener('click', () => {
 // Task 20
 // Напишите функцию, которая проверяет что элементы массива farr_20 содержатся в массиве barr_20. Функция возвращает true, false.
 
-let farr_20 = [1, 2];
+let farr_20 = [5];
 let barr_20 = [9, 8, 7, 2, 1];
 
 
-const t20 = () => { }
+const t20 = () => {
+  const setB = new Set(barr_20);
+  return farr_20.every(item => setB.has(item));
+};
 
 document.querySelector('.b-20').addEventListener('click', () => {
   document.querySelector('.out-20').textContent = t20();

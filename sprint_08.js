@@ -153,7 +153,15 @@ document.querySelector('.b-9').addEventListener('click', t09);
 
 let st_10 = new Set([22, 19, 16, 13, 10, 7]);
 
-const t10 = () => { }
+const t10 = () => {
+  let newSt_10 = new Set();
+  st_10.forEach((item) => {
+    if (item % 2 != 0) {
+      newSt_10.add(item);
+    }
+  })
+  return newSt_10
+}
 
 document.querySelector('.b-10').addEventListener('click', () => {
   document.querySelector('.out-10').textContent = [...t10()].join(' ');

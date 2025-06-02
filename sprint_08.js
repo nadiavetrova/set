@@ -224,7 +224,14 @@ document.querySelector('.b-14').addEventListener('click', () => {
 
 let st_15 = new Set([1, 2, -4, 5, 10, 3, 12, 14, 15, 7, 7]);
 
-const t15 = () => { }
+const t15 = () => {
+  for (item of st_15) {
+    if (item > 10) {
+      st_15.delete(item)
+    }
+  }
+  return st_15
+}
 
 document.querySelector('.b-15').addEventListener('click', () => {
   console.log(t15());

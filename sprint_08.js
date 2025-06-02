@@ -100,7 +100,20 @@ let st_07 = new Set();
 st_07.add([1, 2, 3]);
 st_07.add([4, 5, 6]);
 
-const t07 = () => { }
+
+const t07 = () => {
+  const newSet = new Set();
+  for (let item of st_07) {
+    if (Array.isArray(item)) {
+      item.forEach(num => newSet.add(num));
+    } else {
+      newSet.add(item);
+    }
+  }
+  console.log(newSet);
+
+
+}
 
 document.querySelector('.b-7').addEventListener('click', t07);
 

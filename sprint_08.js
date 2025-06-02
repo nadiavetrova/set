@@ -85,7 +85,7 @@ let st_06 = new Set();
 st_06.add([1, 2, 3]);
 
 const t06 = () => {
-  const objFromSt = [...st_06]
+  const [objFromSt] = [...st_06]
   console.log(objFromSt);
 
 }

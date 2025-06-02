@@ -240,11 +240,12 @@ document.querySelector('.b-15').addEventListener('click', () => {
 // Task 16
 // Напишите функцию, которая берет пароль pass_16 и возвращает true, если в рамках строки пароля символы уникальные (не повторяются) и false в обратном случае.
 
-
-
 let pass_16 = 'Кром строг, силен и вечен';
 
-const t16 = () => { }
+const t16 = () => {
+  const passSet = new Set(pass_16);
+  return pass_16.length === passSet.size;
+}
 
 document.querySelector('.b-16').addEventListener('click', () => {
   console.log(t16());

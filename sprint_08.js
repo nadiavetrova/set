@@ -174,7 +174,10 @@ document.querySelector('.b-10').addEventListener('click', () => {
 let a = new Set([111, 222, 333, 444]);
 let b = new Set([777, 555, 333, 444]);
 
-const t11 = () => { }
+const t11 = () => {
+  a.union(b);
+  return a
+}
 
 document.querySelector('.b-11').addEventListener('click', () => {
   console.log(t11());

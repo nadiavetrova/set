@@ -290,10 +290,22 @@ let farr_18 = [1, 2, 3, 4];
 let barr_18 = [9, 8, 7, 2, 1];
 
 
-const t18 = () => { }
+const t18 = () => {
+  const a = new Set(farr_18);
+  const b = new Set(barr_18);
+  let res = [];
+
+  [...a].filter((item => {
+    if (!b.has(item)) {
+      res.push(item)
+    }
+  }));
+  console.log(res);
+  return res
+}
 
 document.querySelector('.b-18').addEventListener('click', () => {
-  document.querySelector('.out-18').textContent = t18().join(' ');
+  document.querySelector('.out-18').textContent = t18();
 });
 
 

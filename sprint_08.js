@@ -186,7 +186,10 @@ document.querySelector('.b-11').addEventListener('click', () => {
 // Task 12
 // Напишите функцию, которая делает difference наборов a с набором b. Функция должна возвращать созданный set.
 
-const t12 = () => { }
+const t12 = () => {
+  a.difference(b);
+  return a;
+}
 
 document.querySelector('.b-12').addEventListener('click', () => {
   console.log(t12());

@@ -111,8 +111,6 @@ const t07 = () => {
     }
   }
   console.log(newSet);
-
-
 }
 
 document.querySelector('.b-7').addEventListener('click', t07);
@@ -122,8 +120,11 @@ document.querySelector('.b-7').addEventListener('click', t07);
 // Напишите функцию, которая выводит значения из set st_08 по возрастанию в .out-8. Разделитель элементов - пробел. Попробуйте решить задачу в одну или две строки.
 
 let st_08 = new Set([22, 19, 16, 13, 10, 7]);
+const t08 = () => {
+  document.querySelector('.out-8').textContent = [...st_08].sort((a, b) => a - b).join(' ');
+};
 
-const t08 = () => { }
+
 
 document.querySelector('.b-8').addEventListener('click', t08);
 

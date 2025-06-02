@@ -199,9 +199,10 @@ document.querySelector('.b-12').addEventListener('click', () => {
 // Напишите функцию, которая делает intersection наборов a с набором b. Функция должна возвращать созданный set.
 
 const t13 = () => {
-  a.intersection(b);
-  return a;
-}
+  const intersection = new Set([...a].filter(item => b.has(item)));
+  return intersection;
+};
+
 
 document.querySelector('.b-13').addEventListener('click', () => {
   console.log(t13());
@@ -259,10 +260,25 @@ let farr_17 = [1, 2, 3, 4];
 let barr_17 = [9, 8, 7, 2, 1];
 
 
-const t17 = () => { }
+const t17 = () => {
+  const a = new Set(farr_17);
+  const b = new Set(barr_17);
+  let res = [];
+
+  [...a].filter((item => {
+    if (b.has(item)) {
+      res.push(item)
+    }
+  }));
+  console.log(res);
+
+  return res;
+
+}
+
 
 document.querySelector('.b-17').addEventListener('click', () => {
-  document.querySelector('.out-17').textContent = t17().join(' ');
+  document.querySelector('.out-17').textContent = t17();
 });
 
 

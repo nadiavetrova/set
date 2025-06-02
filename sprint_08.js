@@ -210,7 +210,10 @@ document.querySelector('.b-13').addEventListener('click', () => {
 // Task 14
 // Напишите функцию, которая делает symmetricDifference наборов a с набором b. Функция должна возвращать созданный set.
 
-const t14 = () => { }
+const t14 = () => {
+  a.symmetricDifference(b);
+  return a
+}
 
 document.querySelector('.b-14').addEventListener('click', () => {
   console.log(t14());

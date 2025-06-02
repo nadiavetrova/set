@@ -318,7 +318,15 @@ let farr_19 = [1, 2, 3, 4];
 let barr_19 = [9, 8, 7, 2, 1];
 
 
-const t19 = () => { }
+const t19 = () => {
+  const setA = new Set(farr_19);
+  const setB = new Set(barr_19);
+
+  const onlyInA = farr_19.filter(item => !setB.has(item));
+  const onlyInB = barr_19.filter(item => !setA.has(item));
+
+  return [...onlyInA, ...onlyInB];
+};
 
 document.querySelector('.b-19').addEventListener('click', () => {
   document.querySelector('.out-19').textContent = t19().join(' ');
